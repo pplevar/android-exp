@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "127031343242",
+    "firebase_url": "https://fir-exp-babf7.firebaseio.com",
+    "project_id": "fir-exp-babf7",
+    "storage_bucket": "fir-exp-babf7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127031343242:android:28198c1d05a319b7",
+        "android_client_info": {
+          "package_name": "com.levar.firebaseexperiment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "127031343242-b2v5af4fekr4og4rq9dpho29luqbhru0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzuYfHtMdZ-VvZCup340exH0SKpQRb23A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
