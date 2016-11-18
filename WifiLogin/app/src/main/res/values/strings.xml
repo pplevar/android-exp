@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WifiLogin</string>
+    <string name="StringResource">Hello World!</string>
 </resources>
