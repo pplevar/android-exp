@@ -1,0 +1,54 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt  DateTime @default(now())
+  firstName  String?
+  id         String   @id @default(cuid())
+  inboxes    Inbox[]
+  lastName   String?
+  password   String
+  personId   Person?  @relation(fields: [personIdId], references: [id])
+  personIdId String?
+  roles      String[]
+  updatedAt  DateTime @updatedAt
+  username   String   @unique
+}
+
+model Person {
+  createdAt  DateTime       @default(now())
+  dirthDate  DateTime?
+  firstName  String?
+  id         String         @id @default(cuid())
+  lastName   String?
+  patronimic String?
+  sex        EnumPersonSex?
+  updatedAt  DateTime       @updatedAt
+  users      User[]
+}
+
+model Inbox {
+  createdAt DateTime         @default(now())
+  id        String           @id @default(cuid())
+  status    EnumInboxStatus?
+  text      String?
+  updatedAt DateTime         @updatedAt
+  userId    User?            @relation(fields: [userIdId], references: [id])
+  userIdId  String?
+}
+
+enum EnumPersonSex {
+  Male
+  Female
+}
+
+enum EnumInboxStatus {
+  Open
+  Processed
+}
